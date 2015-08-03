@@ -1,12 +1,18 @@
-// alert('Justine is here');
+console.log('Justine is here, girls');
+
+//Here we go!
+///////////////////////////////////////
 
 function isEmpty(element) {
 
-  console.log('dentro');
-  console.log(element);
-
-  if( element.value == 0 ){
+  if(!element.value){
     alert('is empty');
   }
+  if(element.value){
+    alert('has value');
+  }
+};
 
-}
+function fireValidations() {
+  setEmptynessValidationToElements();
+};
