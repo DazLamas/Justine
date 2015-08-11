@@ -5,16 +5,26 @@
   <title>test justine</title>
 </head>
 <body>
-  <select name="select" data-form-validation="emptyness_validation">
-    <option value="">Escoge un número</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-  <input type="text" data-form-validation="emptyness_validation">
-  <button type="submit" data-function="send-data" id="validation-btn">Enviar</button>
+  <form>
+    <div>
+      <section>
+
+        <select name="select" class="justine emptynessValidation">
+          <option value="">Escoge un número</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
+        <input type="text" class="justine emptynessValidation">
+
+        <button class="validation-btn">Enviar</button>
+      </section>
+    </div>
+  </form>
+  <div id="aqui"></div>
 </body>
 </html>
 <script src="justine.js"></script>
