@@ -4,14 +4,33 @@ console.log('Justine is here');
 ///////////////////////////////////////
 
 function emptynessValidation(element) {
+  
+  var error_message = 'Tú, se te ha olvidado';
 
-  if(!element.value){
-    alert('is empty');
+  if(!element.value){//error
+    createError(element, error_message);
   }else{
     (element.value)
     alert('has value');
   }
 };
+
+function createError(element, error_message) {
+  // var error_tooltip = '<a href="#" class="tooltip"><span>' + error_message + '</span></a>'
+  var parent_node 	= element.parentNode;
+  var new_element	= document.createElement("span");
+
+  if(parent_node.lastchild == element) {
+  //add the new_element after the target element.
+  	var error_container = parent_node.appendChild(new_element);
+  } else {
+  // else the target has siblings, insert the new element between the target and it's next sibling.
+  	var error_container = parent_node.insertBefore(new_element, element.nextSibling);
+  }
+
+  error_container.classList.add('error');
+  error_container.innerHTML = error_message;
+}
 
 //Fire validations up
 var fire_validations_element = document.getElementsByClassName("validation-btn");
@@ -53,7 +72,7 @@ function fireValidation(function_name, function_argument){
   var fn = window[function_name];
 
   if(typeof fn === 'function') {
-      fn(function_argument);
+	 fn(function_argument);
   }
 };
 
