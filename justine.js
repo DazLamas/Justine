@@ -16,15 +16,15 @@ function emptynessValidation(element) {
 };
 
 function createError(element, error_message) {
-  // var error_tooltip = '<a href="#" class="tooltip"><span>' + error_message + '</span></a>'
+  
   var parent_node 	= element.parentNode;
   var new_element	= document.createElement("span");
 
   if(parent_node.lastchild == element) {
-  //add the new_element after the target element.
+  
   	var error_container = parent_node.appendChild(new_element);
   } else {
-  // else the target has siblings, insert the new element between the target and it's next sibling.
+  
   	var error_container = parent_node.insertBefore(new_element, element.nextSibling);
   }
 
