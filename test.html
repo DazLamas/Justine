@@ -6,25 +6,22 @@
   <link rel="stylesheet" type="text/css" href="test.css">
 </head>
 <body>
-  <form>
-    <div>
-      <section>
-
-        <select name="select" class="justine emptynessValidation">
-          <option value="">Escoge un número</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-
-        <input type="text" class="justine emptynessValidation">
-
-        <button class="validation-btn">Enviar</button>
-      </section>
-    </div>
-  </form>
+  <section>
+    <form>
+          <select name="select" class="justine-emptynessValidation">
+            <option value="">Escoge un número</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <input type="text" class="justine-onlyNumbers">
+          <button class="validation-btn">Enviar</button>
+    </form>
+  </section>
+  <div id="errors-display">
+  </div>
 </body>
 </html>
 <script src="utils.js"></script>
